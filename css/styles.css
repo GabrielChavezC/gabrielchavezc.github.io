@@ -22,6 +22,10 @@ img {
   display: block;
 }
 
+h3 {
+  align-items: center;
+}
+
 body {
   margin: 0;
   background-color: var(--bg-color);
@@ -210,12 +214,30 @@ body.dark {
   animation: skills-bar-fill 2s ease-in-out forwards;
 }
 
-.skills__bar--70::after {
-  --skills-bar-lenght: 70%;
+.skills__bar--90::after {
+  --skills-bar-lenght: 90%;
+}
+
+.skills__bar--80::after {
+  --skills-bar-lenght: 80%;
+}
+
+.skills__bar--75::after {
+  --skills-bar-lenght: 75%;
+}
+.skills__bar--60::after {
+  --skills-bar-lenght: 60%;
 }
 
 .skills__bar--50::after {
   --skills-bar-lenght: 50%;
+}
+.skills__bar--45::after {
+  --skills-bar-lenght: 45%;
+}
+
+.skills__bar--30::after {
+  --skills-bar-lenght: 30%;
 }
 
 .experience {
@@ -240,6 +262,14 @@ body.dark {
 
 .experience__job {
   margin: 0;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.experience__job--unic {
+  margin: 0;
+  text-align: center;
   margin-bottom: 0.5rem;
   color: var(--primary-color);
   transition: var(--transition);
