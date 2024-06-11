@@ -222,8 +222,8 @@ body.dark {
   --skills-bar-lenght: 80%;
 }
 
-.skills__bar--75::after {
-  --skills-bar-lenght: 75%;
+.skills__bar--70::after {
+  --skills-bar-lenght: 70%;
 }
 .skills__bar--60::after {
   --skills-bar-lenght: 60%;
@@ -232,8 +232,8 @@ body.dark {
 .skills__bar--50::after {
   --skills-bar-lenght: 50%;
 }
-.skills__bar--45::after {
-  --skills-bar-lenght: 45%;
+.skills__bar--40::after {
+  --skills-bar-lenght: 40%;
 }
 
 .skills__bar--30::after {
