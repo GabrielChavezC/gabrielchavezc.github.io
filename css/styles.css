@@ -316,7 +316,7 @@ body.dark {
 .buttons {
   display: flex;
   justify-content: space-between;
-  width: 225px;
+  width: 500px;
 }
 
 @media screen and (min-width: 720px) {
@@ -333,32 +333,27 @@ body.dark {
   border-radius: var(--border-radius);
   transition: var(--transition);
 }
+
 .button--primary {
   background: var(--primary-color);
   color: var(--bg-color);
 }
 
-.button--ghost {
+.button--second {
   background: transparent;
   color: var(--bg-color);
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
 }
-.cv-button {
-  background-color: transparent; /* Color de fondo del botón */
-  color: var(--primary-color); /* Color del texto del botón */
-  border: 1px solid var(--primary-color); /* Quita el borde del botón */
-  padding: 10px 20px; /* Ajusta el espaciado interno del botón */
-  border-radius: 5px; /* Ajusta el radio de borde para que sea redondeado */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  transition: var(
-    --transition
-  ); /* Agrega una transición suave al color de fondo */
-}
 
-.cv-button a {
-  text-decoration: none; /* Quita la subrayado del enlace */
-  color: var(--primary-color); /* Hereda el color del texto del botón */
+.cv-button {
+  width: 150px;
+  line-height: 2.5;
+  text-align: center;
+  background: transparent;
+  color: var(--bg-color);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 .cv-button:hover {
