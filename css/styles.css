@@ -295,7 +295,7 @@ body.dark {
   justify-content: space-between;
   margin: 0.5em 0;
   font-size: 0.6rem;
-  width: 200px;
+  width: 500px;
 }
 
 @media screen and (min-width: 720px) {
