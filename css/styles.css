@@ -175,6 +175,18 @@ body.dark {
   font-size: 0.9rem;
   line-height: 1.6;
 }
+
+.video {
+  align-items: center;
+  width: 320px;
+}
+
+.card__video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (min-width: 720px) {
   .card--project {
     display: grid;
