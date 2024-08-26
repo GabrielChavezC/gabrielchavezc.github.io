@@ -137,6 +137,17 @@ body.dark {
   border-radius: var(--border-radius);
 }
 
+.card__hobbies {
+  margin-bottom: 1em;
+  padding: 1em;
+  min-width: 320px;
+  border: 2px solid var(--primary-color);
+}
+
+.hobbie__tittle {
+  text-align: center;
+}
+
 .card__image-container {
   min-width: 320px;
   border-radius: var(--border-radius);
