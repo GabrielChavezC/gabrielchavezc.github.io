@@ -1,573 +1,1161 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
   <head>
+    <!-- =====================================================
+       01. CONFIGURACIÓN GENERAL Y METADATOS
+       ===================================================== -->
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portafolio profesional de Gabriel Chávez, Ingeniero de Datos y Arquitecto de Analítica especializado en Business Intelligence, Data Science, ETL y soluciones de datos."
+    />
+    <meta name="theme-color" content="#262626" />
+    <title>Gabriel Chávez | Ingeniería de Datos, BI y Data Science</title>
+
+    <!-- Font Awesome: se mantiene la misma versión que usa tu proyecto. -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <!-- Sustituye el CSS anterior por el archivo completo que acompaña este HTML. -->
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Portfolio</title>
   </head>
+
   <body class="dark">
+    <!-- =====================================================
+       02. ENCABEZADO: TEMA, REDES Y COLORES
+       ===================================================== -->
     <header class="header">
+      <!-- El JS existente utiliza los ID toggle-theme, toggle-icon y toggle-text. -->
       <div class="switches">
-        <div id="toggle-theme" class="toggle-theme">
+        <button
+          id="toggle-theme"
+          class="toggle-theme"
+          type="button"
+          aria-label="Cambiar tema claro u oscuro"
+        >
           <img
             id="toggle-icon"
-            src="assets/icons/moon.svg"
-            alt="icon theme"
             class="toggle-theme__icon"
+            src="assets/icons/moon.svg"
+            alt=""
+            aria-hidden="true"
           />
-          <p id="toggle-text" class="toggle-theme__text">Dark Mode</p>
-        </div>
+          <span id="toggle-text" class="toggle-theme__text">Modo oscuro</span>
+        </button>
       </div>
-      <div id="toggle-colors" class="colors">
-        <div
-          data-color="hsl(214, 84%, 56%)"
-          class="colors__items colors__item--blue"
-        ></div>
-        <div
-          data-color="hsl(150, 84%, 56%)"
-          class="colors__items colors__item--green"
-        ></div>
 
-        <div
-          data-color="hsl(276, 84%, 56%)"
+      <!-- Cambia estas URL solo si actualizas tus perfiles profesionales. -->
+      <nav class="social-nav" aria-label="Redes profesionales">
+        <a
+          class="social-nav__link"
+          href="https://github.com/GabrielChavezC"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub de Gabriel Chávez"
+          title="GitHub"
+        >
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a
+          class="social-nav__link"
+          href="https://www.linkedin.com/in/gabriel-chavez-ds/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn de Gabriel Chávez"
+          title="LinkedIn"
+        >
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+      </nav>
+
+      <!-- Conserva el ID toggle-colors para el selector de tu JavaScript. -->
+      <div
+        id="toggle-colors"
+        class="colors"
+        role="group"
+        aria-label="Color principal del sitio"
+      >
+        <button
+          type="button"
+          class="colors__items colors__item--blue"
+          data-color="hsl(214, 84%, 56%)"
+          aria-label="Elegir azul"
+          title="Azul"
+        ></button>
+        <button
+          type="button"
+          class="colors__items colors__item--green"
+          data-color="hsl(150, 84%, 56%)"
+          aria-label="Elegir verde"
+          title="Verde"
+        ></button>
+        <button
+          type="button"
           class="colors__items colors__item--purple"
-        ></div>
-        <div
-          data-color="hsl(46, 84%, 56%)"
+          data-color="hsl(276, 84%, 56%)"
+          aria-label="Elegir morado"
+          title="Morado"
+        ></button>
+        <button
+          type="button"
           class="colors__items colors__item--orange"
-        ></div>
+          data-color="hsl(46, 84%, 56%)"
+          aria-label="Elegir amarillo"
+          title="Amarillo"
+        ></button>
       </div>
     </header>
-    <main class="main">
-      <section class="column column--left">
-        <!--Profile Card-->
+
+    <main class="main" id="inicio">
+      <!-- ===================================================
+         03. COLUMNA IZQUIERDA: PERFIL Y EXPERIENCIA
+         =================================================== -->
+      <section
+        class="column column--left"
+        aria-label="Perfil de Gabriel Chávez"
+      >
+        <!-- 03.1 PERFIL PROFESIONAL -->
         <article class="card card--profile">
-          <div class="card__image-container">
-            <img src="assets/images/porfile1.png" alt="" />
+          <div class="card__image-container profile-photo">
+            <img
+              src="assets/images/porfile1.webp"
+              alt="Fotografía de Gabriel Chávez Camargo"
+              width="400"
+              height="420"
+            />
           </div>
           <div class="card__header">
-            <h2 class="card__title no-margin">Gabriel Chávez Camargo</h2>
-            <p class="card__subtitle">Data Scientist</p>
+            <h1 class="card__title no-margin">Gabriel Chávez Camargo</h1>
+            <p class="card__subtitle">Data Engineer | BI | Data Scientist</p>
           </div>
           <div class="card__body">
+            <!-- La dirección visible y el mailto ahora coinciden. -->
             <div class="card__link">
-              <i class="fas fa-envelope icon"></i>
-              <a href="mailto:chavez_camargo@hotmail.com">
-                gabriel_chavez_ds@hotmail.com</a
+              <i class="fas fa-envelope icon" aria-hidden="true"></i
+              ><a href="mailto:gabriel_chavez_ds@hotmail.com"
+                >gabriel_chavez_ds@hotmail.com</a
               >
             </div>
             <div class="card__link">
-              <i class="fas fa-phone-alt icon"></i>
-              <a href="tel:5518127749"> +525518127749 </a>
+              <i class="fas fa-phone-alt icon" aria-hidden="true"></i
+              ><a href="tel:+525518127749">+52 55 1812 7749</a>
             </div>
-            <p class="card__text">Soy un Ingeniero en Sistemas Computacionales apasionado por el big data, siempre he disfrutado descubrir la información que ocultan los datos a través de análisis específicos. Además, me fascina predecir futuros inciertos utilizando machine learning, lo que me permite ofrecer soluciones precisas y orientadas a resultados.</p>
             <p class="card__text">
-              En este tiempo pude destacar mi experiencia y formación especializada con Python,en el campo de la ciencia de datos.Del mismo modo aplicando modelos de machine learning, tanto en entornos de aprendizaje supervisado como no supervisado. Además, he trabajado con algoritmos como Random Forest, Logistic Regression, LightGBM, XGBoost y CatBoost. Así mismo, he incursionado en el campo de las redes neuronales utilizando TensorFlow y PyTorch.
+              Ingeniero en Sistemas Computacionales especializado en Ingeniería
+              de Datos, Business Intelligence y Data Science.
+            </p>
+            <p class="card__text">
+              Desarrollo soluciones analíticas, procesos ETL y tableros
+              gerenciales con Python, SQL, Power BI y Azure. Complemento mi
+              experiencia con Machine Learning e Inteligencia Artificial para
+              transformar datos en decisiones estratégicas y resultados
+              medibles.
             </p>
           </div>
         </article>
-        <!-- Tarjetas Experiencia -->
-        <article class="card card--esperience">
-          <h2 class="card__title">Experience</h2>
-          <div class="experience">
-            <img
-              src="assets/images/experience.jpg"
-              alt="logo"
-              class="experience__image"
-            />
-            <div class="experience__info">
-              <p class="experience__time">Feb 2024-- Actualidad</p>
-              <h3 class="experience__job">Data Science</h3>
-              <p class="experience__description">
-               En este bootcamp, mejoró mis habilidades con proyectos mensuales de ciencia de datos. Cubrimos desde la visualización y análisis de datos hasta la creación de modelos predictivos para problemas del mundo real.
-              </p>
-            </div>
-          </div>
 
+        <!-- 03.2 EXPERIENCIA PROFESIONAL. Para añadir un empleo, duplica un div.experience. -->
+        <section
+          class="card card--experience"
+          id="experiencia"
+          aria-labelledby="experiencia-title"
+        >
+          <h2 class="card__title" id="experiencia-title">
+            Experiencia profesional
+          </h2>
+          <!-- Empleo actual -->
           <div class="experience">
             <img
-              src="assets/images/TripleTeen.jpg"
-              alt="logo"
+              src="assets/images/dicka_logis.png"
+              alt="Logotipo de Dicka Logistics"
               class="experience__image"
+              width="48"
+              height="48"
+              loading="lazy"
             />
             <div class="experience__info">
-              <p class="experience__time">Oct 2023 -- Jun 2024</p>
-              <h3 class="experience__job">Data Science</h3>
+              <p class="experience__time">Junio 2025 – Actualidad</p>
+              <h3 class="experience__job">
+                Ingeniero de Datos / Arquitecto de Analítica
+              </h3>
+              <h4 class="experience__company">Dicka Logistics</h4>
               <p class="experience__description">
-               Durante 9 meses, participé activamente en la realización de 16 proyectos enfocados en ciencia de datos. Utilizando Python, trabajé en la predicción de diversos modelos tanto para el aprendizaje supervisado como no supervisado. Además, recibí una inducción en las redes neuronales con TensorFlow. Estas experiencias me han brindado un amplio conocimiento y habilidades prácticas en el campo de la ciencia de datos.
+                Desarrollo soluciones de ingeniería de datos, arquitectura
+                analítica e inteligencia de negocio para operaciones logísticas
+                y financieras.
+              </p>
+              <ul class="experience__description experience__bullets">
+                <li>Desarrollo de tableros gerenciales en Power BI.</li>
+                <li>Análisis de indicadores TMS y WMS.</li>
+                <li>Integración de Blue Yonder y Business Central.</li>
+                <li>Automatización de procesos ETL con Python y Airflow.</li>
+                <li>Integración de datos en Greenplum sobre Ubuntu.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Empleo anterior: TURING-IA (sin logotipo; se usa un icono) -->
+          <div class="experience">
+            <span
+              class="experience__image experience__image--icon"
+              aria-hidden="true"
+              ><i class="fas fa-chart-pie"></i
+            ></span>
+            <div class="experience__info">
+              <p class="experience__time">Febrero 2024 – Febrero 2025</p>
+              <h3 class="experience__job">
+                Consultor Analítico y de Inteligencia de Negocios
+              </h3>
+              <h4 class="experience__company">TURING-IA</h4>
+              <ul class="experience__description experience__bullets">
+                <li>Diseño y optimización de dashboards interactivos en Tableau.</li>
+                <li>
+                  Desarrollo de flujos de preparación y transformación de datos
+                  mediante Tableau Prep.
+                </li>
+                <li>
+                  Publicación y administración de soluciones analíticas mediante
+                  Tableau Cloud y Tableau Server.
+                </li>
+              </ul>
+              <p class="experience__description">
+                <strong>Tecnologías:</strong> Tableau · Tableau Prep · Tableau
+                Cloud · Tableau Server
               </p>
             </div>
           </div>
+          <!-- Empleo anterior: Ford -->
           <div class="experience">
             <img
               src="assets/images/ford.png"
-              alt="logo"
+              alt="Logotipo de Ford"
               class="experience__image"
+              width="48"
+              height="48"
+              loading="lazy"
             />
             <div class="experience__info">
-              <p class="experience__time">May 2023 -- Oct 2023</p>
-              <h3 class="experience__job--unic">Ford Motor Company S.A. de C.V.</h3>
+              <p class="experience__time">Mayo 2023 – Octubre 2023</p>
+              <h3 class="experience__job">Técnico universal de producción</h3>
+              <h4 class="experience__company">Ford Motor Company</h4>
               <p class="experience__description">
-                Técnico Universal en línea de producción para el ensamble del vehículo Mustang mach-E.
-                Visualización de insights en general sobre la producción,planta y diferentes areas.
+                Trabajo en línea de producción para el ensamble del Mustang
+                Mach-E y visualización de información sobre la producción y
+                distintas áreas de la planta.
               </p>
             </div>
           </div>
-        </article>     <!--Cierre Tarjetas Experiencia -->
+        </section>
 
-         <!--CV -->
-      <article class="card card--hobbies">
-        <h2 class="card__title">CV</h2>
-        <div class="card__image-container">
-          <img src="assets/images/CV1.png" alt="CV">
-
-        </div>
-        <h3 class="hobbie__tittle">Mi cv</h3>
-        <p class="card__text">Te comparto mi CV, donde destaco mi experiencia como Ingeniero en Sistemas Computacionales con especialización en ciencia de datos y machine learning. A través de proyectos de big data y análisis predictivo, he demostrado habilidades en Python, Pandas y modelos de machine learning. ¡Espero que encuentres mi perfil interesante!</p>
-       <button class="cv-button">
-    <a href="https://drive.google.com/file/d/1oF5wl2ZBTczUxVVEcOuz9HbO2beStpEW/view?usp=drive_link" target="_blank" download>Descargar CV</a>
-  </button>
-      </article>
-                    <!--Cierre CV -->
-
-         <!--CV -->
-      <article class="card card--hobbies">
-        <h2 class="card__title">¿Tienes un minuto?</h2>
-        <div class="card__video-container">
-        <video class="video" controls  src="assets/images/Mi video.mp4"></video>
-
-        </div>
-        <h3 class="hobbie__tittle">Te presento mi CV digital</h3>
-  </button>
-      </article>
-
-                    <!--INICIO DE HOBBIES-->
-      <article class="card card--hobbies">
-        
-        <h2 class="card__title">Hobbies</h2>
-        <div class="card__hobbies card__image-container">
-          <img src="assets/images/reparacion.png" alt="Hobbi">
-
-      
-        <h3 class="hobbie__tittle">Soporte Técnico de Equipos de Computo</h3>
-        <p class="card__text">Algo que empezo con un hobbie se convirtio en un emprendimiento propio brindando soluciones de Mantenimiento predictivo, preventivo y correctivo a Laptops, Notebooks y pc de escritorio. 
-        </p>
-    </div>
-        <div class="card__hobbies card__image-container">
-          <img src="assets/images/ejercicio.png" alt="Hobbi">
-
-      
-        <h3 class="hobbie__tittle">Música & Ejercicio</h3>
-        <p class="card__text">Uno de mis mayores pasatiempos es escuchar música mientras realizo alguna actividad física.
-        </p>
-    </div>
-      </article>
-               <!--cIERRE DE HOBBIES-->
-          </section>
-      <!-- Tarjetas de progreso -->
-      <section class="column column--right">
-        <article class="card">
-          <h2 class="card__title">Programación</h2>
-          <small>Años de Experiencia</small>
-          <div class="skills">
-            <div class="skills__header">
-              <span class="skills__start-level">0</span>
-              <span class="skills__start-level">2</span>
-            </div>
-            <div class="skills">
-              <div class="skills__item">
-                <p class="skills__tech">PYTHON</p>
-                <div class="skills__bar skills__bar--60"></div>
-              </div>
-               <div class="skills__item">
-              <p class="skills__tech">SQL</p>
-              <div class="skills__bar skills__bar--40"></div>
-            </div>
-            </div>
-          </div>
-        </article>
-        <article class="card">
-          <h2 class="card__title">Librerías</h2>
-          <div class="skills">
-            <div class="skills__item">
-              <p class="skills__tech">PANDAS</p>
-              <div class="skills__bar skills__bar--90"></div>
-            </div>
-            <div class="skills__item">
-              <p class="skills__tech">SCIKIT-LEARN</p>
-              <div class="skills__bar skills__bar--70"></div>
-            </div>
-            <div class="skills__item">
-              <p class="skills__tech">NUMPY</p>
-              <div class="skills__bar skills__bar--70"></div>
-            </div>
-            <div class="skills__item">
-              <p class="skills__tech">MATPLOTIB</p>
-              <div class="skills__bar skills__bar--80"></div>
-            </div>
-          </div>
-        </article>
-        <!-- Tarjetas Experiencia -->
-        <article class="card">
-          <h2 class="card__title">OTROS</h2>
-          <div class="skills">
-           
-            <div class="skills__item">
-              <p class="skills__tech">TENSORFLOW</p>
-              <div class="skills__bar skills__bar--40"></div>
-            </div>
-            <div class="skills__item">
-              <p class="skills__tech">PYTORCH</p>
-              <div class="skills__bar skills__bar--40"></div>
-            </div>
-          </div>
-          
-        </article>
-                                  <!-- Proyectos -->
-
-            <!-- Proyectos 2 -->
-         <article class="card card--project">
-          <div class="card__image-container">
+        <!-- 03.3 FORMACIÓN ESPECIALIZADA: se separa de los empleos. -->
+        <section
+          class="card card--education"
+          id="formacion"
+          aria-labelledby="formacion-title"
+        >
+          <h2 class="card__title" id="formacion-title">
+            Formación especializada
+          </h2>
+          <div class="experience">
             <img
-              src="assets/images/telec_exp.jpeg"
-              alt="project"
-              class="card__image"
+              src="assets/images/experience.jpg"
+              alt="Imagen de formación en ciencia de datos"
+              class="experience__image"
+              width="48"
+              height="48"
+              loading="lazy"
+            />
+            <div class="experience__info">
+              <p class="experience__time">Febrero 2024 – 2025</p>
+              <h3 class="experience__job">Data Science</h3>
+              <p class="experience__description">
+                Bootcamp con proyectos mensuales sobre visualización, análisis
+                de datos y modelos predictivos.
+              </p>
+            </div>
+          </div>
+          <div class="experience">
+            <img
+              src="assets/images/TripleTeen.jpg"
+              alt="Logotipo de TripleTen"
+              class="experience__image"
+              width="48"
+              height="48"
+              loading="lazy"
+            />
+            <div class="experience__info">
+              <p class="experience__time">Octubre 2023 – Junio 2024</p>
+              <h3 class="experience__job">Data Science · TripleTen</h3>
+              <p class="experience__description">
+                Formación de nueve meses con 16 proyectos de ciencia de datos,
+                aprendizaje supervisado y no supervisado, y una introducción a
+                redes neuronales con TensorFlow.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 03.4 CURRÍCULUM: respeta los ID usados por scripts.js y el PDF existente. -->
+        <article class="card card--cv" id="cv">
+          <h2 class="card__title">Mi currículum</h2>
+          <div class="card__image-container cv-preview">
+            <img
+              src="assets/images/CV1.png"
+              alt="Vista previa de mi currículum"
+              loading="lazy"
             />
           </div>
-          
-          <div class="project">
-            <div class="project__tags">
-              <span class="project__tag">#Python</span>
-              <span class="project__tag">#Skalearn</span>
-              <span class="project__tag">#Matplotib</span>
-               <span class="project__tag">#ML</span>
-            </div>
-       
-          <h2  class="card__title" style="text-align: center;">Modelado de Churn para una Empresa de Telecomunicaciones</h2>
-          <p class="card_text">
-            Una empresa de telecomunicaciones desea mejorar la retención de sus clientes, identificando aquellos que tienen mayor probabilidad de abandonar el servicio (churn), seleccionando las mejores características para aumentar le precisión del modelo. (SelectKBest,RFE,PCA)
-
+          <p class="card__text">
+            Conoce mi experiencia en Ingeniería de Datos, Business Intelligence,
+            Data Science e Inteligencia Artificial.
           </p>
-          <p class="card_text">
-           💡 Se logro una acurracy del 80% solamente con selección de características.
-
-          </p>
-
-            <p class="card_text">
-           ✅ El modelo predice correctamente el resultado en el 80% de los casos.
-          </p>
-          <!--Botones Proyectos -->
-          <div class="buttons">
-            <a href="projects/proyect_telecom_experience.html" target="_blank" class="button button--primary">Code</a>
-            <a href="https://github.com/GabrielChavezC/Telecom_Churn_BXPE" target="_blank" class="button button--second">github</a>
-            <a href="#" target="_blank" class="button button--primary">Linkedin</a>
-             <a href="https://drive.google.com/file/d/19kJZX-5oOVrAPs4K824fhBIp86Xni4Ap/view?usp=sharing" target="_blank" class="button button--second">PDF</a>
+          <div class="cv-actions">
+            <button
+              type="button"
+              id="open-cv"
+              class="button button--second"
+              aria-haspopup="dialog"
+              aria-controls="cv-modal"
+            >
+              <i class="fas fa-eye" aria-hidden="true"></i> Ver CV
+            </button>
+            <a
+              href="assets/docs/CV_Gabriel_Chavez.pdf"
+              download="CV_Gabriel_Chavez.pdf"
+              class="button button--primary"
+              ><i class="fas fa-download" aria-hidden="true"></i> Descargar</a
+            >
           </div>
-                    
-        </article>
-        
-             <!-- Proyectos 2 -->
-
-          <article class="card card--project">
-          <div class="card__image-container">
-            <img
-              src="assets/images/instacart.jpeg"
-              alt="project"
-              class="card__image"
-            />
-          </div>
-          
-          <div class="project">
-            <div class="project__tags">
-              <span class="project__tag">PYTHON</span>
-              <span class="project__tag">SQL</span>
-              <span class="project__tag">MATPLOTIB</span>
-               <span class="project__tag">BD</span>
-            </div>
-       
-          <h2 class="card__title">Insights estratégicos para aumentar las ganacias con extracción de datos SQL</h2>
-          <p class="card_text">
-          Instacart es una plataforma de entregas de comestibles donde la clientela puede registrar un pedido y hacer que se lo entreguen, similar a Uber Eats y Door Dash.🏪</p>
-          <p class="card_text">
-           ✅ Se ofrecen insights estratégicos para aumentar las ganacias. 💰
-          </p>
-           <p class="card_text">
-           Conexión a la base de datos SQL con python. ⏏️ 
-          </p>
-          <!--Botones Proyectos -->
-          <div class="buttons">
-            <a href="projects/sql.html" target="_blank" class="button button--primary">Code</a>
-            <a href="https://github.com/GabrielChavezC/SQL_INSTACART" target="_blank" class="button button--second">github</a>
-            <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7254915283205730304/" target="_blank" class="button button--primary">Linkedin</a>
-             <a href="https://drive.google.com/file/d/1aM2hLbpJB4JjpKRFJ1pL7YKpiSVNd3JJ/view?usp=drive_link" target="_blank" class="button button--second">PDF</a>
-          </div>
-                    
-        </article>
-                                          <!-- Proyectos -->
-      
-         <article class="card card--project">
-          <div class="card__image-container">
-            <img
-              src="assets/images/Streamlit.png"
-              alt="project"
-              class="card__image"
-            />
-          </div>
-          <div class="project">
-            <div class="project__tags">
-             <span class="project__tag">#Streamlit</span>
-              <span class="project__tag">#Ploty</span>
-              <span class="project__tag">#Pandas</span>
-              <span class="project__tag">#Python</span>
-            
-            </div>
-       
-          <h2 class="card__title">Mejora tus ganancias con insigths estratégicos</h2>
-          <p class="card_text">🚀 Impulsa tu tienda usando un análisis de datos <b>estratégicos</b> 📊</p>
-          <p class="card_text">
-           💡 Una tienda online de moda, con presencia en todo Brasil, necesita impulsar su rendimiento utilizando sus datos de manera estratégica. 🌟👗
-          </p>
-          <p class="card_text">
-          Se ofrece al cliente información valiosa sobre sus <b>ventas</b> para asi tomar una decisión y mejorar las ganancias de la tienda. 👠🔍💡 
-          </p>
-
-          <!--Botones Proyectos -->
-          <div class="buttons">
-            <a href="https://github.com/GabrielChavezC/store_sales_interactive" target="_blank" class="button button--second">github</a>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7226217926574440451/" target="_blank" class="button button--primary">Linkedin</a>
-             <a href="https://dash-store-brazil-analytics.streamlit.app/" target="_blank" class="button button--second">APP</a>
-          </div>
-                    
-        </article>
-                                                 <!-- Proyectos -->
-         <article class="card card--project">
-          <div class="card__image-container">
-            <img
-              src="assets/images/TELECOM.png"
-              alt="project"
-              class="card__image"
-            />
-          </div>
-          
-          <div class="project">
-            <div class="project__tags">
-              <span class="project__tag">#Streamlit</span>
-              <span class="project__tag">#Matplotib</span>
-              <span class="project__tag">#Scikit-Learn</span>
-              <span class="project__tag">#ML</span>
-            </div>
-       
-          <h2 class="card__title">No dejes que tus clientes se vayan</h2>
-          <p class="card_text">
-          Al operador de telecomunicaciones <b>Interconnect</b> le gustaría poder pronosticar su tasa de cancelación de clientes 📉. Si se descubre que un usuario o usuaria planea irse 🏃‍♂️🏃‍♀️, se le ofrecerán <b>códigos promocionales</b> 🎟️ y opciones de planes especiales 🌟.
-          </p>
-          <p class="card_text">
-           El equipo de marketing de Interconnect ha recopilado algunos de los datos personales de sus clientes 🗂️, incluyendo información sobre sus planes y contratos 📑.
-
-          </p>
-          <!--Botones Proyectos -->
-          <div class="buttons">
-            <a href="projects/telecom_proyect.html" target="_blank" class="button button--primary">Code</a>
-            <a href="https://telecom.streamlit.app/" target="_blank" class="button button--second">App</a>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7218962684245872640/" target="_blank" class="button button--primary">Linkedin</a>
-             <a href="https://drive.google.com/file/d/1XhURCThP-XoZJBO2cOopt84qor74Tw0k/view?usp=drive_link" target="_blank" class="button button--second">PDF</a>
-          </div>
-                    
-        </article>              
-        
-        <article class="card card--project">
-          <div class="card__image-container">
-            <img
-              src="assets/images/movies.png"
-              alt="project"
-              class="card__image"
-            />
-          </div>
-          
-          <div class="project">
-            <div class="project__tags">
-              <span class="project__tag">#Pandas</span>
-              <span class="project__tag">#BigData</span>
-              <span class="project__tag">#Matplotib</span>
-              <span class="project__tag">#Dask</span>
-             
-             
-             
-            </div>
-       
-          <h2 class="card__title">Impulsa tus ganancias con los grandes géneros del cine</h2>
-          <p class="card_text">
-         🚀 Un cliente pide insights estratégicos sobre los géneros más rentables de la historia ya que planea invertir en diferentes films para generar las <b>mayores ganancias</b>.</p>
-
-         <p>Nuestro objetivo es desglosar millones de datos que incluyen:</p>
-          <p class="card_text">⭐ Reseñas y calificaciones</p>
-          <p class="card_text">💰 Ganancias y costos de producción</p>
-          <p class="card_text">⏳ Duración de las películas</p>
-          
-        
-          <!--Botones Proyectos -->
-          <div class="buttons">
-            <a href="projects/movies_proyect.html" target="_blank" class="button button--primary">Code</a>
-            <a href="https://github.com/GabrielChavezC/Movie_Analysis_EDA-/tree/main" target="_blank" class="button button--second">github</a>
-            <a href="#" target="_blank" class="button button--primary">Linkedin</a>
-             <a href="https://drive.google.com/file/d/1O0mMVe3elC3qC44qMrtuDHJTeBmq0Sl_/view?usp=sharing" target="_blank" class="button button--second">PDF</a>
-          </div>
-                    
-        </article>
-        
-
-                                                         <!-- Proyectos -->
-           <article class="card card--project">
-          <div class="card__image-container">
-            <img
-              src="assets/images/fraude.png"
-              alt="project"
-              class="card__image"
-            />
-          </div>
-          <div class="project">
-            <div class="project__tags">
-              <span class="project__tag">#Pandas</span>
-              <span class="project__tag">#Matplotib</span>
-              <span class="project__tag">#Scikit-Learn</span>
-              </div>
-       
-          <h2 class="card__title">Financial Fraud Detection</h2>
-          <p class="card_text">
-          💼 En este desafiante proyecto, nos enfrentamos a una base de datos masiva de seis millones de transacciones. Nuestra tarea principal es construir un modelo de machine learning capaz de identificar <b>transacciones fraudulentas</b>, ¡y solo contamos con el 0.1% de datos etiquetados como fraudulentos! 😱
-
-          </p>
-          <p class="card_text">
-           💡💡 ¡Desarrollar un modelo preciso en estas condiciones fue todo un reto! Pero con el poder del machine learning y la dedicación, estamos un paso más cerca de combatir el fraude financiero de manera efectiva. 💪
-          </p>
-          <!--Botones Proyectos -->
-          <div class="buttons">
-            <!-- <a href="projects/KNN.html" target="_blank" class="button button--primary">Code</a> -->
-            <a href="https://github.com/GabrielChavezC/Financial_Fraud_Detection" target="_blank" class="button button--second">github</a>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7201801202420830208/" target="_blank" class="button button--primary">Linkedin</a>
-            <a href="https://drive.google.com/file/d/1p2QzXY-PZSzsio_2u9Ule-6Vz5RYHgJ7/view?usp=sharing" target="_blank" class="button button--second">PDF</a>
-          </div>
-          <!-- Proyectos 2 -->
         </article>
 
-         <article class="card card--project">
-          <div class="card__image-container">
-            <img
-              src="assets/images/knn.png"
-              alt="project"
-              class="card__image"
-            />
+        <!-- 03.5 VIDEO OPCIONAL. preload=none evita descargarlo antes de reproducir. -->
+        <article class="card card--video">
+          <h2 class="card__title">¿Tienes un minuto?</h2>
+          <div class="card__video-container">
+            <video
+              class="video"
+              controls
+              preload="none"
+              playsinline
+              poster="assets/video/presentacion-poster.jpg"
+              aria-label="Presentación profesional en video"
+              src="assets/video/presentacion.mp4"
+            ></video>
           </div>
-          
-          <div class="project">
-            <div class="project__tags">
-              <span class="project__tag">#KNN</span>
-              <span class="project__tag">#Matplotib</span>
-              <span class="project__tag">#Numpy</span>
-               <span class="project__tag">#Scikit-Learn</span>
-            </div>
-       
-          <h2 class="card__title">¿Sabes como manejar tus valores faltantes/ausentes?</h2>
-          <p class="card_text">
-          A diferencia de otras técnicas como la sustitución por la media o la mediana, KNNImputer no altera de una manera abrupta la distribución de tus datos. En cambio, utiliza la información de los k vecinos más cercanos en el espacio de características para imputar valores faltantes de manera más cercana.
-
-          </p>
-          <p class="card_text">
-           💡 ¡Descubre cómo funciona KNNImputer y mejora tus habilidades en el manejo de datos!
-          </p>
-          <!--Botones Proyectos -->
-          <div class="buttons">
-            <a href="projects/KNN.html" target="_blank" class="button button--primary">Code</a>
-            <a href="https://github.com/GabrielChavezC/KNNImputer" target="_blank" class="button button--second">github</a>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7203749019393671169/" target="_blank" class="button button--primary">Linkedin</a>
-             <a href="https://drive.google.com/file/d/1Rywr9ZbTBYaWv9KDytoTuHEsULPfaBw1/view?usp=sharing" target="_blank" class="button button--second">PDF</a>
-          </div>
-                    
+          <h3 class="card__subtitle">Te presento mi CV digital</h3>
         </article>
 
-                                       <!-- Proyectos -->
-    
-        
-         <article class="card card--project">
-          <div class="card__image-container">
+        <!-- 03.6 INTERESES PERSONALES -->
+        <article class="card card--hobbies">
+          <h2 class="card__title">Intereses</h2>
+          <div class="hobby-item">
             <img
-              src="assets/images/project.jpg"
-              alt="project"
-              class="card__image"
+              src="assets/images/reparacion.webp"
+              alt="Reparación de equipos de cómputo"
+              loading="lazy"
             />
+            <h3>Soporte técnico de equipos de cómputo</h3>
+            <p class="card__text">
+              Un pasatiempo que se convirtió en un emprendimiento de
+              mantenimiento preventivo y correctivo de equipos de cómputo.
+            </p>
           </div>
-          
-          <div class="project">
-            <div class="project__tags">
-              <span class="project__tag">#</span>
-              <span class="project__tag">#</span>
-              <span class="project__tag">#</span>
-               <span class="project__tag">#</span>
-            </div>
-       
-          <h2 class="card__title">Comming Soon</h2>
-          <p class="card_text">
-          Proximamente
-
-          </p>
-          <p class="card_text">
-           💡 
-          </p>
-          <!--Botones Proyectos -->
-          <div class="buttons">
-            <a href="#" target="_blank" class="button button--primary">Code</a>
-            <a href="#" target="_blank" class="button button--second">github</a>
-            <a href="#" target="_blank" class="button button--primary">Linkedin</a>
-             <a href="#" target="_blank" class="button button--second">PDF</a>
-          </div>
-                    
-        </article>
-        
-                                                <!-- Proyectos -->
-
-        
-         <article class="card card--project">
-          <div class="card__image-container">
+          <div class="hobby-item">
             <img
-              src="assets/images/project.jpg"
-              alt="project"
-              class="card__image"
+              src="assets/images/ejercicio.webp"
+              alt="Música y ejercicio"
+              loading="lazy"
             />
+            <h3>Música y ejercicio</h3>
+            <p class="card__text">
+              Disfruto escuchar música mientras realizo actividad física.
+            </p>
           </div>
-          
-          <div class="project">
-            <div class="project__tags">
-              <span class="project__tag">#</span>
-              <span class="project__tag">#</span>
-              <span class="project__tag">#</span>
-               <span class="project__tag">#</span>
-            </div>
-       
-          <h2 class="card__title">Comming Soon</h2>
-          <p class="card_text">
-          Proximamente
-
-          </p>
-          <p class="card_text">
-           💡 
-          </p>
-          <!--Botones Proyectos -->
-          <div class="buttons">
-            <a href="#" target="_blank" class="button button--primary">Code</a>
-            <a href="#" target="_blank" class="button button--second">github</a>
-            <a href="#" target="_blank" class="button button--primary">Linkedin</a>
-             <a href="#" target="_blank" class="button button--second">PDF</a>
-          </div>
-                    
         </article>
       </section>
+
+      <!-- ===================================================
+         04. COLUMNA DERECHA: HERRAMIENTAS Y PROYECTOS
+         =================================================== -->
+      <section
+        class="column column--right"
+        aria-label="Tecnologías y proyectos"
+      >
+        <!-- 04.1 TECNOLOGÍAS: para agregar una herramienta, añade un span a la lista. -->
+        <article class="card card--tools" id="tecnologias">
+          <div class="tools-header">
+            <i class="fas fa-database tools-icon" aria-hidden="true"></i>
+            <h2 class="card__title">Ingeniería de Datos</h2>
+          </div>
+          <div class="tools-list">
+            <span>Python</span><span>SQL</span><span>Apache Airflow</span
+            ><span>Greenplum</span><span>ETL / ELT</span
+            ><span>Linux Ubuntu</span>
+          </div>
+        </article>
+        <article class="card card--tools">
+          <div class="tools-header">
+            <i class="fas fa-chart-line tools-icon" aria-hidden="true"></i>
+            <h2 class="card__title">Business Intelligence</h2>
+          </div>
+          <div class="tools-list">
+            <span>Power BI</span><span>DAX</span><span>Modelado de datos</span
+            ><span>KPIs</span><span>Business Central</span><span>Tableau</span>
+          </div>
+        </article>
+        <article class="card card--tools">
+          <div class="tools-header">
+            <i class="fas fa-brain tools-icon" aria-hidden="true"></i>
+            <h2 class="card__title">Data Science e IA</h2>
+          </div>
+          <div class="tools-list">
+            <span>Pandas</span><span>NumPy</span><span>Scikit-learn</span
+            ><span>XGBoost</span><span>TensorFlow</span><span>PyTorch</span>
+          </div>
+        </article>
+
+        <!-- =================================================
+           04.2 PROYECTOS: CUADRÍCULA DE TARJETAS COMPACTAS
+           Para AGREGAR OTRO PROYECTO: copia un article.project-card
+           dentro de div.projects-grid y cambia imagen, textos,
+           tecnologías y enlaces. NO necesitas modificar JS.
+           No añadas métricas o vínculos que no puedas verificar.
+           ================================================= -->
+        <section
+          class="projects-section"
+          id="proyectos"
+          aria-labelledby="proyectos-title"
+        >
+          <div class="projects-heading">
+            <div>
+              <p class="section-eyebrow">PORTAFOLIO</p>
+              <h2 id="proyectos-title">Proyectos destacados</h2>
+            </div>
+            <p>
+              Explora el problema, la solución y la evidencia de cada proyecto.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <!-- PROYECTO PROFESIONAL 01: ETL / AIRFLOW -->
+            <!-- =====================================================
+     PROYECTO PROFESIONAL 01
+     ARQUITECTURA ETL - AIRFLOW / GREENPLUM / UBUNTU
+
+     Imagen: assets/images/etl_airflow_ilustrativo.webp
+     Proyecto real con imagen de representación conceptual.
+     No contiene código ni información interna de la empresa.
+===================================================== -->
+
+            <article class="project-card">
+              <!-- 01. IMAGEN Y CATEGORÍA -->
+              <div class="project-card__media">
+                <img
+                  src="assets/images/etl_airflow_ilustrativo.webp"
+                  alt="Ilustración de un flujo ETL con fuentes de datos, orquestación con Airflow, servidor Ubuntu, almacén Greenplum y tableros analíticos"
+                  loading="lazy"
+                />
+
+                <span class="project-card__category">
+                  Ingeniería de Datos
+                </span>
+              </div>
+
+              <!-- 02. CONTENIDO DEL PROYECTO -->
+              <div class="project-card__body">
+                <!-- TÍTULO -->
+                <h3>Arquitectura ETL y automatización de pipelines de datos</h3>
+
+                <!-- DESCRIPCIÓN -->
+                <p class="project-card__description">
+                  Desarrollo y automatización de pipelines
+                  ETL para integrar información operativa
+                  desde distintas fuentes hacia una capa
+                  analítica centralizada, utilizando Python,
+                  SQL, Apache Airflow, Greenplum y
+                  servidores Ubuntu para soportar procesos
+                  de carga, transformación y disponibilidad
+                  de datos.
+                </p>
+
+                <!-- OBJETIVO -->
+                <p class="project-card__description">
+                  <strong>Objetivo:</strong>
+                  Automatizar y centralizar el flujo de
+                  datos para análisis y reportería,
+                  reduciendo dependencia de procesos
+                  manuales y mejorando la disponibilidad de
+                  información.
+                </p>
+
+                <!-- 03. RESULTADO DESTACADO -->
+                <div class="project-card__highlight">
+                  <i class="fas fa-project-diagram" aria-hidden="true"></i>
+
+                  <div>
+                    <strong> Automatización de cargas y centralización de datos </strong>
+
+                    <small>
+                      Estandarización de pipelines ETL,
+                      integración de múltiples fuentes y
+                      disponibilidad de información para
+                      análisis y reportería.
+                    </small>
+                  </div>
+                </div>
+
+                <!-- 04. TECNOLOGÍAS Y ESPECIALIDADES -->
+                <ul
+                  class="project-card__tags"
+                  aria-label="Tecnologías del proyecto"
+                >
+                  <li>Python</li>
+                  <li>SQL</li>
+                  <li>Apache Airflow</li>
+                  <li>Greenplum</li>
+                  <li>Ubuntu</li>
+                  <li>ETL / ELT</li>
+                </ul>
+
+                <!-- 05. NOTA DE CONFIDENCIALIDAD -->
+                <p class="project-card__description">
+                  Imagen conceptual. No se muestran datos, código ni interfaces
+                  internas de la empresa.
+                </p>
+
+                <!-- No se incluyen enlaces a sistemas privados. -->
+              </div>
+            </article>
+
+            <!-- FIN PROYECTO PROFESIONAL 01 -->
+
+            <!-- PROYECTO PROFESIONAL 02: FINANZAS / BUSINESS CENTRAL -->
+            <!-- =====================================================
+     PROYECTO PROFESIONAL 02
+     REPORTERÍA FINANCIERA - BUSINESS CENTRAL / API / POWER BI
+
+     Imagen: assets/images/finanzas_business_central_ilustrativo.webp
+     Proyecto real con imagen de representación conceptual.
+     No contiene código ni información interna de la empresa.
+===================================================== -->
+
+            <article class="project-card">
+              <!-- 01. IMAGEN Y CATEGORÍA -->
+              <div class="project-card__media">
+                <img
+                  src="assets/images/finanzas_business_central_ilustrativo.webp"
+                  alt="Ilustración de un flujo desde un ERP financiero vía API hacia un tablero de cobranza y análisis financiero"
+                  loading="lazy"
+                />
+
+                <span class="project-card__category">
+                  Business Intelligence
+                </span>
+              </div>
+
+              <!-- 02. CONTENIDO DEL PROYECTO -->
+              <div class="project-card__body">
+                <!-- TÍTULO -->
+                <h3>Reportería financiera automatizada para cobranza y seguimiento</h3>
+
+                <!-- DESCRIPCIÓN -->
+                <p class="project-card__description">
+                  Desarrollo de soluciones de reportería
+                  financiera conectando información mediante
+                  API desde Business Central hacia Power BI,
+                  con el objetivo de automatizar reportes,
+                  reducir tiempos operativos y brindar mayor
+                  visibilidad al seguimiento de cobranza y
+                  análisis financiero.
+                </p>
+
+                <!-- OBJETIVO -->
+                <p class="project-card__description">
+                  <strong>Objetivo:</strong>
+                  Reducir el tiempo de generación de
+                  reportes financieros y mejorar la
+                  visibilidad del seguimiento de cobranza
+                  mediante automatización e integración de
+                  datos.
+                </p>
+
+                <!-- 03. RESULTADO DESTACADO -->
+                <div class="project-card__highlight">
+                  <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
+
+                  <div>
+                    <strong> Reducción de tiempos en reportería financiera </strong>
+
+                    <small>
+                      Automatización de reportes y mayor
+                      visibilidad para seguimiento de
+                      cobranza y análisis financiero.
+                    </small>
+                  </div>
+                </div>
+
+                <!-- 04. TECNOLOGÍAS Y ESPECIALIDADES -->
+                <ul
+                  class="project-card__tags"
+                  aria-label="Tecnologías del proyecto"
+                >
+                  <li>Power BI</li>
+                  <li>Business Central</li>
+                  <li>API</li>
+                  <li>Finanzas</li>
+                  <li>Cobranza</li>
+                  <li>Automatización</li>
+                </ul>
+
+                <!-- 05. NOTA DE CONFIDENCIALIDAD -->
+                <p class="project-card__description">
+                  Imagen conceptual. No se muestran datos, código ni interfaces
+                  internas de la empresa.
+                </p>
+
+                <!-- No se incluyen enlaces a sistemas privados. -->
+              </div>
+            </article>
+
+            <!-- FIN PROYECTO PROFESIONAL 02 -->
+
+            <!-- PROYECTO PROFESIONAL 03: TMS -->
+            <!-- =====================================================
+     PROYECTO PROFESIONAL 03
+     TABLERO TMS - DICKA LOGISTICS
+
+     Imagen: assets/images/tms_dashboard_ilustrativo.webp
+     Proyecto real con imagen de representación conceptual.
+     No contiene código ni información interna de la empresa.
+===================================================== -->
+
+            <article class="project-card">
+              <!-- 01. IMAGEN Y CATEGORÍA -->
+              <div class="project-card__media">
+                <img
+                  src="assets/images/tms_dashboard_ilustrativo.webp"
+                  alt="Ilustración de un centro logístico con tablero TMS y seguimiento de embarques"
+                  loading="lazy"
+                />
+
+                <span class="project-card__category">
+                  Business Intelligence
+                </span>
+              </div>
+
+              <!-- 02. CONTENIDO DEL PROYECTO -->
+              <div class="project-card__body">
+                <!-- TÍTULO -->
+                <h3>Tablero TMS para monitoreo de citas y embarques</h3>
+
+                <!-- DESCRIPCIÓN -->
+                <p class="project-card__description">
+                  Desarrollo de un tablero de inteligencia de negocio para
+                  monitorear citas tardías, llegadas a carga y descarga,
+                  embarques y órdenes, proporcionando mayor visibilidad de la
+                  operación logística.
+                </p>
+
+                <!-- 03. RESULTADO DESTACADO -->
+                <div class="project-card__highlight">
+                  <i class="fas fa-chart-line" aria-hidden="true"></i>
+
+                  <div>
+                    <strong> ~60% → 95%+ </strong>
+
+                    <small>
+                      Mejora reportada del indicador de llegadas a carga y
+                      descarga tras implementar el tablero y el seguimiento
+                      operativo.
+                    </small>
+                  </div>
+                </div>
+
+                <!-- 04. TECNOLOGÍAS Y ESPECIALIDADES -->
+                <ul
+                  class="project-card__tags"
+                  aria-label="Tecnologías del proyecto"
+                >
+                  <li>Power BI</li>
+                  <li>TMS</li>
+                  <li>KPIs</li>
+                  <li>Logística</li>
+                </ul>
+
+                <!-- 05. NOTA DE CONFIDENCIALIDAD -->
+                <p class="project-card__description">
+                  Imagen conceptual. No se muestran datos, código ni interfaces
+                  internas de la empresa.
+                </p>
+
+                <!-- No se incluyen enlaces a sistemas privados. -->
+              </div>
+            </article>
+
+            <!-- FIN PROYECTO PROFESIONAL 03 -->
+
+            <!-- PROYECTO PROFESIONAL 04: WMS -->
+            <!-- =====================================================
+     PROYECTO PROFESIONAL 04
+     TABLEROS WMS - VISIBILIDAD OPERATIVA DE ALMACÉN
+
+     Imagen: assets/images/wms_dashboard_ilustrativo.webp
+     Proyecto real con imagen de representación conceptual.
+     No contiene código ni información interna de la empresa.
+===================================================== -->
+
+            <article class="project-card">
+              <!-- 01. IMAGEN Y CATEGORÍA -->
+              <div class="project-card__media">
+                <img
+                  src="assets/images/wms_dashboard_ilustrativo.webp"
+                  alt="Ilustración de un tablero WMS con inventario, entradas, salidas y ajustes de almacén"
+                  loading="lazy"
+                />
+
+                <span class="project-card__category">
+                  Business Intelligence
+                </span>
+              </div>
+
+              <!-- 02. CONTENIDO DEL PROYECTO -->
+              <div class="project-card__body">
+                <!-- TÍTULO -->
+                <h3>Tableros WMS para visibilidad operativa de almacén</h3>
+
+                <!-- DESCRIPCIÓN -->
+                <p class="project-card__description">
+                  Desarrollo de tableros orientados a operaciones de almacén,
+                  enfocados en la visualización de inventario, entradas,
+                  salidas, ajustes y principales tareas operativas. La solución
+                  facilita la consulta de información, mejora la limpieza y
+                  estandarización de datos y proporciona mayor visibilidad para
+                  clientes y equipos internos.
+                </p>
+
+                <!-- 03. RESULTADO DESTACADO -->
+                <div class="project-card__highlight">
+                  <i class="fas fa-warehouse" aria-hidden="true"></i>
+
+                  <div>
+                    <strong> Mayor visibilidad y consulta más ágil </strong>
+
+                    <small>
+                      Centralización de información operativa para reducir
+                      tiempos de consulta y facilitar el seguimiento de
+                      inventarios, entradas, salidas y ajustes.
+                    </small>
+                  </div>
+                </div>
+
+                <!-- 04. TECNOLOGÍAS Y ESPECIALIDADES -->
+                <ul
+                  class="project-card__tags"
+                  aria-label="Tecnologías del proyecto"
+                >
+                  <li>Power BI</li>
+                  <li>WMS</li>
+                  <li>Inventario</li>
+                  <li>KPIs</li>
+                  <li>Limpieza de datos</li>
+                </ul>
+
+                <!-- 05. NOTA DE CONFIDENCIALIDAD -->
+                <p class="project-card__description">
+                  Imagen conceptual. No se muestran datos, código ni interfaces
+                  internas de la empresa.
+                </p>
+
+                <!-- No se incluyen enlaces a sistemas privados. -->
+              </div>
+            </article>
+
+            <!-- FIN PROYECTO PROFESIONAL 04 -->
+
+            <!-- PROYECTO 01 · CHURN Y SELECCIÓN DE CARACTERÍSTICAS -->
+            <article class="project-card">
+              <div class="project-card__media">
+                <img
+                  src="assets/images/telec_exp.jpeg"
+                  alt="Ilustración del proyecto de predicción de abandono de clientes"
+                  loading="lazy"
+                />
+                <span class="project-card__category">Machine Learning</span>
+              </div>
+              <div class="project-card__body">
+                <h3>Predicción de abandono en telecomunicaciones</h3>
+                <p class="project-card__description">
+                  Modelo de clasificación para identificar clientes con riesgo
+                  de cancelar el servicio mediante selección de características.
+                </p>
+                <!-- La cifra procede del proyecto original; confirma su método de evaluación al actualizarlo. -->
+                <div class="project-card__highlight">
+                  <i class="fas fa-chart-bar" aria-hidden="true"></i>
+                  <div>
+                    <strong>80% de accuracy</strong
+                    ><small>Resultado reportado en el proyecto</small>
+                  </div>
+                </div>
+                <ul class="project-card__tags" aria-label="Tecnologías">
+                  <li>Python</li>
+                  <li>Scikit-learn</li>
+                  <li>ML</li>
+                </ul>
+                <div class="project-card__actions">
+                  <a
+                    href="projects/proyect_telecom_experience.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fas fa-file-code" aria-hidden="true"></i>
+                    Estudio</a
+                  >
+                  <a
+                    href="https://github.com/GabrielChavezC/Telecom_Churn_BXPE"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fab fa-github" aria-hidden="true"></i> Código</a
+                  >
+                  <a
+                    href="https://drive.google.com/file/d/19kJZX-5oOVrAPs4K824fhBIp86Xni4Ap/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="far fa-file-pdf" aria-hidden="true"></i> PDF</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- PROYECTO 02 · INSTACART / SQL -->
+            <article class="project-card">
+              <div class="project-card__media">
+                <img
+                  src="assets/images/instacart.jpeg"
+                  alt="Ilustración del análisis de datos de Instacart"
+                  loading="lazy"
+                /><span class="project-card__category">Análisis de datos</span>
+              </div>
+              <div class="project-card__body">
+                <h3>Insights de compras con SQL</h3>
+                <p class="project-card__description">
+                  Extracción y análisis de datos de Instacart con SQL y Python
+                  para explorar patrones de compra y oportunidades de negocio.
+                </p>
+                <ul class="project-card__tags" aria-label="Tecnologías">
+                  <li>SQL</li>
+                  <li>Python</li>
+                  <li>Matplotlib</li>
+                </ul>
+                <div class="project-card__actions">
+                  <a
+                    href="projects/sql.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fas fa-file-code" aria-hidden="true"></i>
+                    Estudio</a
+                  >
+                  <a
+                    href="https://github.com/GabrielChavezC/SQL_INSTACART"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fab fa-github" aria-hidden="true"></i> Código</a
+                  >
+                  <a
+                    href="https://drive.google.com/file/d/1aM2hLbpJB4JjpKRFJ1pL7YKpiSVNd3JJ/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="far fa-file-pdf" aria-hidden="true"></i> PDF</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- PROYECTO 03 · DASHBOARD DE VENTAS / STREAMLIT -->
+            <article class="project-card">
+              <div class="project-card__media">
+                <img
+                  src="assets/images/Streamlit.png"
+                  alt="Imagen del proyecto de análisis de ventas con Streamlit"
+                  loading="lazy"
+                /><span class="project-card__category">Visualización</span>
+              </div>
+              <div class="project-card__body">
+                <h3>Dashboard interactivo de ventas</h3>
+                <p class="project-card__description">
+                  Aplicación para explorar datos de ventas de una tienda de moda
+                  en Brasil y obtener información para decisiones comerciales.
+                </p>
+                <ul class="project-card__tags" aria-label="Tecnologías">
+                  <li>Streamlit</li>
+                  <li>Plotly</li>
+                  <li>Pandas</li>
+                  <li>Python</li>
+                </ul>
+                <div class="project-card__actions">
+                  <a
+                    href="https://github.com/GabrielChavezC/store_sales_interactive"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fab fa-github" aria-hidden="true"></i> Código</a
+                  >
+                  <a
+                    href="https://dash-store-brazil-analytics.streamlit.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    Abrir app</a
+                  >
+                  <a
+                    href="https://www.linkedin.com/feed/update/urn:li:activity:7226217926574440451/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                    Publicación</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- PROYECTO 04 · CHURN / INTERCONNECT -->
+            <article class="project-card">
+              <div class="project-card__media">
+                <img
+                  src="assets/images/TELECOM.png"
+                  alt="Imagen del proyecto de retención de clientes Interconnect"
+                  loading="lazy"
+                /><span class="project-card__category">Data Science</span>
+              </div>
+              <div class="project-card__body">
+                <h3>Retención de clientes con Machine Learning</h3>
+                <p class="project-card__description">
+                  Análisis predictivo de cancelación de contratos para estudiar
+                  el riesgo de abandono de clientes de telecomunicaciones.
+                </p>
+                <ul class="project-card__tags" aria-label="Tecnologías">
+                  <li>Scikit-learn</li>
+                  <li>Streamlit</li>
+                  <li>ML</li>
+                </ul>
+                <div class="project-card__actions">
+                  <a
+                    href="projects/telecom_proyect.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fas fa-file-code" aria-hidden="true"></i>
+                    Estudio</a
+                  >
+                  <a
+                    href="https://telecom.streamlit.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    Abrir app</a
+                  >
+                  <a
+                    href="https://drive.google.com/file/d/1XhURCThP-XoZJBO2cOopt84qor74Tw0k/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="far fa-file-pdf" aria-hidden="true"></i> PDF</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- PROYECTO 05 · ANÁLISIS DE PELÍCULAS -->
+            <article class="project-card">
+              <div class="project-card__media">
+                <img
+                  src="assets/images/movies.png"
+                  alt="Imagen del proyecto de análisis de películas"
+                  loading="lazy"
+                /><span class="project-card__category"
+                  >Análisis exploratorio</span
+                >
+              </div>
+              <div class="project-card__body">
+                <h3>Análisis de rentabilidad cinematográfica</h3>
+                <p class="project-card__description">
+                  Estudio de géneros, reseñas, costos y recaudación para
+                  explorar tendencias económicas del cine.
+                </p>
+                <ul class="project-card__tags" aria-label="Tecnologías">
+                  <li>Pandas</li>
+                  <li>Dask</li>
+                  <li>Matplotlib</li>
+                </ul>
+                <div class="project-card__actions">
+                  <a
+                    href="projects/movies_proyect.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fas fa-file-code" aria-hidden="true"></i>
+                    Estudio</a
+                  >
+                  <a
+                    href="https://github.com/GabrielChavezC/Movie_Analysis_EDA-/tree/main"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fab fa-github" aria-hidden="true"></i> Código</a
+                  >
+                  <a
+                    href="https://drive.google.com/file/d/1O0mMVe3elC3qC44qMrtuDHJTeBmq0Sl_/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="far fa-file-pdf" aria-hidden="true"></i> PDF</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- PROYECTO 06 · DETECCIÓN DE FRAUDE -->
+            <article class="project-card">
+              <div class="project-card__media">
+                <img
+                  src="assets/images/fraude.png"
+                  alt="Imagen del proyecto de detección de fraude financiero"
+                  loading="lazy"
+                /><span class="project-card__category">Machine Learning</span>
+              </div>
+              <div class="project-card__body">
+                <h3>Detección de fraude financiero</h3>
+                <p class="project-card__description">
+                  Exploración de un conjunto de seis millones de transacciones
+                  con clases muy desbalanceadas para desarrollar un modelo de
+                  detección de fraude.
+                </p>
+                <ul class="project-card__tags" aria-label="Tecnologías">
+                  <li>Pandas</li>
+                  <li>Scikit-learn</li>
+                  <li>Python</li>
+                </ul>
+                <div class="project-card__actions">
+                  <a
+                    href="https://github.com/GabrielChavezC/Financial_Fraud_Detection"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fab fa-github" aria-hidden="true"></i> Código</a
+                  >
+                  <a
+                    href="https://www.linkedin.com/feed/update/urn:li:activity:7201801202420830208/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                    Publicación</a
+                  >
+                  <a
+                    href="https://drive.google.com/file/d/1p2QzXY-PZSzsio_2u9Ule-6Vz5RYHgJ7/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="far fa-file-pdf" aria-hidden="true"></i> PDF</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- PROYECTO 07 · IMPUTACIÓN DE VALORES FALTANTES -->
+            <article class="project-card">
+              <div class="project-card__media">
+                <img
+                  src="assets/images/knn.png"
+                  alt="Imagen del proyecto de imputación KNN"
+                  loading="lazy"
+                /><span class="project-card__category">Técnicas de datos</span>
+              </div>
+              <div class="project-card__body">
+                <h3>Imputación de datos faltantes con KNN</h3>
+                <p class="project-card__description">
+                  Ejemplo práctico del uso de KNNImputer para estimar valores
+                  ausentes a partir de observaciones cercanas.
+                </p>
+                <ul class="project-card__tags" aria-label="Tecnologías">
+                  <li>KNN</li>
+                  <li>NumPy</li>
+                  <li>Scikit-learn</li>
+                </ul>
+                <div class="project-card__actions">
+                  <a
+                    href="projects/KNN.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fas fa-file-code" aria-hidden="true"></i>
+                    Estudio</a
+                  >
+                  <a
+                    href="https://github.com/GabrielChavezC/KNNImputer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fab fa-github" aria-hidden="true"></i> Código</a
+                  >
+                  <a
+                    href="https://drive.google.com/file/d/1Rywr9ZbTBYaWv9KDytoTuHEsULPfaBw1/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="far fa-file-pdf" aria-hidden="true"></i> PDF</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- =================================================
+               PLANTILLA PARA AÑADIR UN PROYECTO NUEVO:
+               1) Copia un article.project-card completo arriba.
+               2) Cambia imagen, categoría, título y descripción.
+               3) Deja solo vínculos que ya existan y funcionen.
+               4) Si hay un resultado medido, agrega opcionalmente
+                  un div.project-card__highlight antes de las etiquetas.
+               5) No crees otro contenedor projects-grid.
+               ================================================= -->
+          </div>
+          <!-- FIN .projects-grid -->
+        </section>
+        <!-- FIN #proyectos -->
+      </section>
+      <!-- FIN columna derecha -->
     </main>
+    <!-- FIN main -->
+
+    <!-- =====================================================
+       05. MODAL DEL CV: NO CAMBIES ESTOS ID SIN CAMBIAR JS
+       ===================================================== -->
+    <dialog id="cv-modal" class="cv-modal" aria-labelledby="cv-modal-title">
+      <div class="cv-modal__header">
+        <h2 id="cv-modal-title">Mi currículum</h2>
+        <button
+          type="button"
+          id="close-cv"
+          class="cv-modal__close"
+          aria-label="Cerrar currículum"
+        >
+          &times;
+        </button>
+      </div>
+      <iframe
+        src="assets/docs/CV_Gabriel_Chavez.pdf"
+        title="Vista previa del currículum"
+        class="cv-modal__pdf"
+      ></iframe>
+      <div class="cv-modal__footer">
+        <!-- Solo visible en móvil/táctil: abre el PDF en el visor del navegador. -->
+        <a
+          href="assets/docs/CV_Gabriel_Chavez.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button button--second cv-modal__open"
+          ><i class="fas fa-external-link-alt" aria-hidden="true"></i> Abrir
+          PDF</a
+        >
+        <a
+          href="assets/docs/CV_Gabriel_Chavez.pdf"
+          download="CV_Gabriel_Chavez.pdf"
+          class="button button--primary"
+          ><i class="fas fa-download" aria-hidden="true"></i> Descargar PDF</a
+        >
+      </div>
+    </dialog>
+
+    <!-- =====================================================
+       06. JAVASCRIPT EXISTENTE: se carga después del modal
+       ===================================================== -->
     <script src="js/scripts.js"></script>
   </body>
 </html>

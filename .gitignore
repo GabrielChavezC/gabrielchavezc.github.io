@@ -1,0 +1,9 @@
+# RStudio
+.Rproj.user/
+*.Rproj
+.Rhistory
+.RData
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
